@@ -1,0 +1,34 @@
+version: '3'
+
+tasks:
+  start:
+    desc: Start all services (docker compose up)
+    cmds:
+      - docker compose up -d
+
+  stop:
+    desc: Stop all services
+    cmds:
+      - docker compose down
+
+  pull-model:
+    desc: Pull the Llama 3.2 model
+    cmds:
+      - docker exec -it ollama ollama pull llama3.2
+
+  setup:
+    desc: Complete setup - start services and pull model
+    cmds:
+      - cmd: docker compose up -d --wait
+        desc: Start services and wait for health checks
+      - task: pull-model
+
+  run:
+    desc: Run the agent main function
+    cmds:
+      - docker compose exec jupyter python -m task.agent
+
+  test:
+    desc: Run the agent tests
+    cmds:
+      - docker compose exec jupyter pytest test/agent_test.py --log-cli-level=INFO
