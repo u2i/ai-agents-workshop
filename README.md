@@ -1,5 +1,4 @@
-# AI Workshop
-
+# AI Agents Workshop
 This repository contains materials and exercises for AI Agents Workshop.
 
 ### Prerequisites
@@ -19,6 +18,15 @@ Learn the fundamentals through examples:
 
 ### 2. Discussion
 
+---
+
+### Homework
+At home, solve a practical task located in `/homework` directory!
+
+[View the homework README here](./homework/README.md)
+
+---
+
 ## Repository Structure
 
 ```
@@ -37,8 +45,3 @@ Learn the fundamentals through examples:
 ```
 
 ---
-
-### Homework
-At home, solve a practical task located in `/homework` directory!
-
-[View the homework README here](./homework/README.md)
