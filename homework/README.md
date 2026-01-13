@@ -3,7 +3,7 @@ Your goal is to create an AI agent that generates fantasy character(called `NPC`
 
 You can use any prompting technique learned in the theoretical part, mix them etc.
 
-You're alos encouraged to think out of the box and just try each approach you can think of!
+You're also encouraged to think out of the box and just try each approach you can think of!
 
 ## What You'll Build
 An AI-powered NPC generator that takes a text prompt (_e.g., "Create a mysterious elven ranger who guards the ancient woods and speaks in riddles"_) and returns a complete [NPC object](./models.py) with:
@@ -15,7 +15,7 @@ An AI-powered NPC generator that takes a text prompt (_e.g., "Create a mysteriou
 
 ## Your Tasks
 Replace the [placeholder agent implementation](./agent.py). Your solution can(and most probably should):
-- Use one of the prompt techinques we've discussed
+- Use one of the prompt techniques we've discussed
 - Test how often it fails, play with retries param
 - Run your agent with `task run`* command to see it in action
 - When ready, run the tests with `task test`** command!

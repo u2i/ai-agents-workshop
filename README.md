@@ -50,6 +50,7 @@ This repository contains materials and exercises for AI Agents Workshop.
 ### Prerequisites
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Task/Taskfile](https://taskfile.dev/docs/installation) (optional, but recommended)
+- [VS Code Jupyter Extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) (optional, but recommended)
 
 ### 1. Workshop plan
 Learn the fundamentals through examples:
