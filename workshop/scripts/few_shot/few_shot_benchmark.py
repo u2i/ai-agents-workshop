@@ -9,7 +9,7 @@ from scripts.few_shot.models import SentimentAnalysis
 from scripts.few_shot.prompts import get_plain_system_prompt, get_few_shot_system_prompt
 
 OLLAMA_BASE_URL = "http://localhost:11434/v1"
-MODEL = "llama3.2"
+MODEL = "qwen2.5:1.5b"
 ollama_model = OpenAIChatModel(
     model_name=MODEL,
     provider=OllamaProvider(base_url=OLLAMA_BASE_URL),

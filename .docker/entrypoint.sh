@@ -9,16 +9,16 @@ until ollama list >/dev/null 2>&1; do
     sleep 1
 done
 
-# Check if llama3.2 model exists, if not pull it with retries
-if ! ollama list | grep -q "llama3.2"; then
-    echo "Pulling llama3.2 model..."
+# Check if qwen2.5:1.5b model exists, if not pull it with retries
+if ! ollama list | grep -q "qwen2.5:1.5b"; then
+    echo "Pulling qwen2.5:1.5b model..."
     MAX_RETRIES=200
     RETRY_COUNT=0
 
     while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
         echo "Attempt $((RETRY_COUNT + 1)) of $MAX_RETRIES..."
 
-        if ollama pull llama3.2; then
+        if ollama pull qwen2.5:1.5b; then
             echo "Model pulled successfully!"
             break
         else
@@ -28,12 +28,12 @@ if ! ollama list | grep -q "llama3.2"; then
                 sleep 10
             else
                 echo "Failed to pull model after $MAX_RETRIES attempts"
-                echo "You can manually pull it later with: docker exec ollama ollama pull llama3.2"
+                echo "You can manually pull it later with: docker exec ollama ollama pull qwen2.5:1.5b"
             fi
         fi
     done
 else
-    echo "llama3.2 model already exists"
+    echo "qwen2.5:1.5b model already exists"
 fi
 
 wait

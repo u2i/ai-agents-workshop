@@ -10,7 +10,7 @@ services:
       - ollama_data:/root/.ollama
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "ollama list | grep -q llama3.2 || exit 1"]
+      test: ["CMD-SHELL", "ollama list | grep -q qwen2.5:1.5b || exit 1"]
       interval: 10s
       timeout: 100s
       retries: 200
