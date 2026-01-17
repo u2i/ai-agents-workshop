@@ -11,12 +11,23 @@ class Class(str, Enum):
     BARD = "Bard"
     COMMONER = "Commoner"
     MONSTER = "Monster"
+    RANGER = "Ranger"
 
-
+class CreativeResponse(BaseModel):
+    name: str = Field(description="The full name of the character")
+    is_hostile: bool = Field(description="Whether the character is aggressive towards players")
+    catchphrase: str = Field(description="A short, memorable quote typical of this character")
 class Stats(BaseModel):
     strength: int = Field(ge=1, le=20, description="Physical power (1-20)")
     charisma: int = Field(ge=1, le=20, description="Social influence (1-20)")
     intelligence: int = Field(ge=1, le=20, description="Mental acuity (1-20)")
+
+class StatsResponse(BaseModel):
+    #reasoning field
+    reasoning: str = Field(description="Explain why these stats fit the class and character description step-by-step.")
+    strength: int = Field(description="Physical power (1-20)")
+    charisma: int = Field(description="Social influence (1-20)")
+    intelligence: int = Field( description="Mental acuity (1-20)")
 
 
 class NPC(BaseModel):
